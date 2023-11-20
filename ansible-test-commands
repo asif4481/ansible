@@ -1,0 +1,4 @@
+ansible all -i 11.1.1.5, -c network_cli -u cisco -k -m ios_facts -e ansible_network_os=ios
+
+
+

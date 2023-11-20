@@ -1,0 +1,25 @@
+
+
+route add -net 11.1.1.0/24 gw 192.168.253.10
+
+
+=====================================
+
+ansible all -i 11.1.1.5, -c network_cli -u cisco -k -m ios_facts -e ansible_network_os=ios
+
+ansible-playbook -i 11.1.1.5, -u cisco -k -e ansible_network_os=ios 01_playbook.yml
+
+ansible-playbook -i /etc/ansible/hosts1 01_playbook.yml
+
+ansible-playbook -l routers 01_playbook.yml
+
+ansible-playbook -l R1 04_playbook.yml
+
+ansible-playbook --limit 'routers:!R1' 04_playbook.yml
+
+
+
+
+
+
+

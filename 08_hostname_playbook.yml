@@ -1,0 +1,56 @@
+---
+
+- name: Change Router Hostname
+  hosts: R1
+  gather_facts: false
+
+  tasks:
+    - name: Change R1 Hostname
+      ios_config:
+        backup: yes
+        lines:
+          - hostname Router1
+
+- name: Change Router Hostname
+  hosts: R2
+  gather_facts: false
+
+  tasks:
+    - name: Change R2 Hostname
+      ios_config:
+        backup: yes
+        lines:
+          - hostname Router2
+
+- name: Change Router Hostname
+  hosts: R3
+  gather_facts: false
+
+  tasks:
+    - name: Change R3 Hostname
+      ios_config:
+        backup: yes
+        lines:
+          - hostname Router3
+
+- name: Change Router Hostname
+  hosts: R4
+  gather_facts: false
+
+  tasks:
+    - name: Change R4 Hostname
+      ios_config:
+        backup: yes
+        lines:
+          - hostname Router4
+
+- name: Change Router Hostname
+  hosts: R5
+  gather_facts: false
+
+  tasks:
+    - name: Change R5 Hostname
+      ios_config:
+        backup: yes
+        lines:
+          - hostname Router5

@@ -1,0 +1,35 @@
+CentOS 7
+==========================================
+su -
+
+vi /etc/sudoers
+
+#add user for sudo
+
+==========================================
+
+sudo yum -y update
+
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+dnf repolist all
+
+sudo yum -y install ansible vim curl
+
+mkdir /tmp/tower && cd /tmp/tower
+
+curl -k -O https://releases.ansible.com/ansible-tower/setup/ansible-tower-setup-latest.tar.gz
+
+tar xvf ansible-tower-setup-latest.tar.gz
+
+cd ansible-tower-setup-3.8.6-2
+
+vim inventory
+(add passowrd)
+
+./setup.sh
+
+
+
+
+
